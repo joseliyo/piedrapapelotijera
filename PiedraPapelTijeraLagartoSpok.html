@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Piedra Papel o Tijera Lagarto Spock</title>
+	<script type="text/javascript" src="js/spok.js">
+	</script>
+	<style>
+		body{
+			background:url(imagenes/fondo.jpg);
+		}
+		table{
+background: rgb(46,6,86); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(46,6,86,1) 0%, rgba(0,58,140,1) 12%, rgba(28,18,86,1) 25%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(15,0,86,1) 76%, rgba(0,45,137,1) 91%, rgba(44,0,66,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(46,6,86,1)), color-stop(12%,rgba(0,58,140,1)), color-stop(25%,rgba(28,18,86,1)), color-stop(40%,rgba(0,0,0,1)), color-stop(50%,rgba(0,0,0,1)), color-stop(51%,rgba(0,0,0,1)), color-stop(60%,rgba(17,17,17,1)), color-stop(76%,rgba(15,0,86,1)), color-stop(91%,rgba(0,45,137,1)), color-stop(100%,rgba(44,0,66,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(46,6,86,1) 0%,rgba(0,58,140,1) 12%,rgba(28,18,86,1) 25%,rgba(0,0,0,1) 40%,rgba(0,0,0,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(15,0,86,1) 76%,rgba(0,45,137,1) 91%,rgba(44,0,66,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  rgba(46,6,86,1) 0%,rgba(0,58,140,1) 12%,rgba(28,18,86,1) 25%,rgba(0,0,0,1) 40%,rgba(0,0,0,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(15,0,86,1) 76%,rgba(0,45,137,1) 91%,rgba(44,0,66,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  rgba(46,6,86,1) 0%,rgba(0,58,140,1) 12%,rgba(28,18,86,1) 25%,rgba(0,0,0,1) 40%,rgba(0,0,0,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(15,0,86,1) 76%,rgba(0,45,137,1) 91%,rgba(44,0,66,1) 100%); /* IE10+ */
+background: linear-gradient(to right,  rgba(46,6,86,1) 0%,rgba(0,58,140,1) 12%,rgba(28,18,86,1) 25%,rgba(0,0,0,1) 40%,rgba(0,0,0,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(15,0,86,1) 76%,rgba(0,45,137,1) 91%,rgba(44,0,66,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e0656', endColorstr='#2c0042',GradientType=1 ); /* IE6-9 */
+
+
+
+		}
+		p{
+			color:white;
+		}
+	</style>
+
+</head>
+<header>
+  <img src="imagenes/banner.jpg" />
+  <br>
+  
+  <img style="cursor:pointer" title="Haz Clic aqui" src="imagenes/reglas.jpg" onclick="muestra_oculta('reglas')" />
+  <img style="cursor:pointer" title="Haz Clic aqui" src="imagenes/creditos.jpg" onclick="muestra_oculta('creditos')" />
+  <br> 
+  <div id="reglas">
+	<img src="imagenes/reglasdeljuego.jpg" />
+  </div>
+  <div id="creditos">
+	<img src="imagenes/creditosjosezapata.jpg" />
+  </div>
+</header>
+<body>
+
+ 
+<table>
+	<tr>
+		<td colspan="5"><p style="font-family:arial;"><strong>Haz Clic en la imagen que desees para Jugar</strong></p></td>
+	</tr>
+	
+	
+	<tr>
+		<td><img style="cursor:pointer" title="Haz Clic en Piedra para jugar" src="imagenes/piedra.fw.png" onclick="llamar(0)"/></td>
+		<td><img src="imagenes/transpa.fw.png" /></td>
+		<td><img style="cursor:pointer" title="Haz Clic en Tijera para jugar" src="imagenes/tijera.fw.png" onclick="llamar(2)"/></td>
+		
+		<td colspan="2"><div id="empatepiedra"><img src="imagenes/empatepiedra.fw.png" /></div>
+						<div id="piedrapapel"><img src="imagenes/piedra-papel.fw.png" /></div>
+						<div id="piedratijera"><img src="imagenes/piedra-tijera.fw.png" /></div>
+						<div id="piedralagarto"><img src="imagenes/piedra-lagarto.fw.png" /></div>
+						<div id="piedraspock"><img src="imagenes/piedra-spock.fw.png" /></div>
+						<div id="empatepapel"><img src="imagenes/empatepapel.fw.png" /></div>
+						<div id="papelpiedra"><img src="imagenes/papel-piedra.fw.png" /></div>
+						<div id="papeltijera"><img src="imagenes/papel-tijera.fw.png" /></div>
+						<div id="papellagarto"><img src="imagenes/papel-lagarto.fw.png" /></div>
+						<div id="papelspock"><img src="imagenes/papel-spock.fw.png" /></div>
+						<div id="empatetijera"><img src="imagenes/empatetijera.fw.png" /></div>
+						<div id="tijerapiedra"><img src="imagenes/tijera-piedra.fw.png" /></div>
+						<div id="tijerapapel"><img src="imagenes/tijera-papel.fw.png" /></div>
+						<div id="tijeralagarto"><img src="imagenes/tijeras-lagarto.fw.png" /></div>
+						<div id="tijeraspock"><img src="imagenes/tijeras-spock.fw.png" /></div>
+						<div id="empatelagarto"><img src="imagenes/empatelagarto.fw.png" /></div>
+						<div id="lagartopiedra"><img src="imagenes/lagarto-piedra.fw.png" /></div>
+						<div id="lagartopapel"><img src="imagenes/lagarto-papel.fw.png" /></div>
+						<div id="lagartotijera"><img src="imagenes/lagarto-tijeras.fw.png" /></div>
+						<div id="lagartospock"><img src="imagenes/lagarto-spock.fw.png" /></div>
+						<div id="empatespock"><img src="imagenes/empatespock.fw.png" /></div>
+						<div id="spockpiedra"><img src="imagenes/spock-piedra.fw.png" /></div>
+						<div id="spockpapel"><img src="imagenes/spock-papel.fw.png" /></div>
+						<div id="spocktijera"><img src="imagenes/spock-tijeras.fw.png" /></div>
+						<div id="spocklagarto"><img src="imagenes/spock-lagarto.fw.png" /></div></td>
+	</tr>
+	<tr>
+		<td><img src="imagenes/transpa.fw.png" /></td>
+		<td><img style="cursor:pointer" title="Haz Clic en Papel para jugar" src="imagenes/papel.fw.png" onclick="llamar(1)"/></td>
+		<td colspan="2"></td>
+		
+	</tr>
+	
+	<tr>
+		<td><img style="cursor:pointer" title="Haz Clic en Lagarto para jugar" src="imagenes/lagarto.fw.png" onclick="llamar(3)"/></td>
+		<td><img src="imagenes/transpa.fw.png" /></td>
+		<td><img style="cursor:pointer" title="Haz Clic en Spock para jugar" src="imagenes/spock.fw.png" onclick="llamar(4)"/></td>
+		<td><img src="imagenes/transpa.fw.png" /></td>
+		<td><img src="imagenes/transpa.fw.png" /></td>
+		
+	</tr>
+	
+</table>
+</body>
+</html>
+		
+		
